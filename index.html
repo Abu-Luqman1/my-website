@@ -14,20 +14,16 @@
         h1 {
             color: #f1c40f;
         }
-        /* ለበተኑ (Button) የተሰጠ ውበት */
         .my-button {
             display: inline-block;
-            background-color: #e74c3c; /* ቀይ ቀለም */
+            background-color: #e74c3c;
             color: white;
-            padding: 12px 24px;
+            padding: 10px 20px;
             text-decoration: none;
-            font-size: 18px;
+            border-radius: 20px;
             font-weight: bold;
-            border-radius: 25px;
-            margin-top: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
-        /* ምስሉ እንዳይበላሽ የሚያደርግ */
         img {
             max-width: 80%;
             height: auto;
@@ -39,37 +35,38 @@
 <body>
 
     <h1>እንኳን ደህና መጡ!</h1>
-    <p>ይህ በAcode የሰራሁት የመጀመሪያው ዌብሳይቴ ነው።</p>
-
+    <p>ይህ በAcode የሰራሁት የመጀመሪያው ዌብሳይት ነው።</p>
+    
     <br>
-    <img src="profile-pic.jpg" alt="My Profile Picture" />
+    <img src="profile-pic.jpg" alt="የድረ-ገፁ አርማ">
     <br><br>
 
     <a href="https://t.me/bishoftumedrestutakwa" target="_blank" class="my-button">ወደ እኔ ቴሌግራም ይግቡ</a>
-<hr style="margin: 40px 0; border: 1px solid #e74c3c;">
 
-<div style="background-color: #34495e; max-width: 85%; margin: 20px auto; padding: 20px; border-radius: 10px; text-align: left;">
-    <h2 style="color: #f1c40f; text-align: center;">የደረሶች አዲስ መመዝገቢያ ፎርም</h2>
-    
-    <form>
-        <label style="display: block; margin-top: 10px; color: white;">የተማሪው ሙሉ ስም፦</label>
-        <input type="text" placeholder="እባክዎ ስም ያስገቡ" style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: none;">
+    <hr style="margin: 40px 0; border: 1px solid #34495e;">
 
-        <label style="display: block; margin-top: 15px; color: white;">የሚከታተሉት የደርስ አይነት፦</label>
-        <select style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: none;">
-            <option>ቁርአን (ሂፍዝ)</option>
-            <option>ቃኢዳ ኑራንያ</option>
-            <option>አቂዳ</option>
-            <option>ፊቅህ</option>
-            <option>ሀዲስ</option>
-        </select>
+    <div style="background-color: #34495e; max-width: 400px; margin: auto; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-align: left;">
+        <h2 style="color: #f1c40f; text-align: center; margin-top: 0; font-size: 14pt;">የደራሾች አዲስ መመዝገቢያ ፎርም</h2>
 
-        <label style="display: block; margin-top: 15px; color: white;">የወላጅ ስልክ ቁጥር፦</label>
-        <input type="tel" placeholder="09..." style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: none;">
+        <form action="https://formspree.io/f/mzdqlrwz" method="POST">
+            <label style="display: block; margin: 10px 0; color: white; font-size: 10pt;">የተማሪው ሙሉ ስም፦</label>
+            <input type="text" name="student_name" placeholder="እባክዎ ስም ያስገቡ" required style="width: 100%; padding: 10px; border: none; border-radius: 4px; box-sizing: border-box;">
 
-        <button type="button" style="background-color: #e74c3c; color: white; border: none; padding: 12px 20px; margin-top: 20px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer;">ተማሪውን መዝግብ</button>
-    </form>
-</div>
+            <label style="display: block; margin: 10px 0; color: white; font-size: 10pt;">የሚከታተሉት የደርስ አይነት፦</label>
+            <select name="course_type" style="width: 100%; padding: 10px; border: none; border-radius: 4px; background-color: white; box-sizing: border-box;">
+                <option>ቁርአን (ሂፍዝ)</option>
+                <option>ቃኢዳ ኑራንያ</option>
+                <option>አቂዳ</option>
+                <option>ፊቅህ</option>
+                <option>ሀዲስ</option>
+            </select>
+
+            <label style="display: block; margin: 10px 0; color: white; font-size: 10pt;">የወላጅ ስልክ ቁጥር፦</label>
+            <input type="tel" name="phone_number" placeholder="09..." required style="width: 100%; padding: 10px; border: none; border-radius: 4px; box-sizing: border-box;">
+
+            <button type="submit" style="background-color: #e74c3c; color: white; border: none; padding: 12px; width: 100%; margin-top: 20px; font-weight: bold; border-radius: 5px; cursor: pointer; font-size: 11pt;">ተማሪውን መዝግብ</button>
+        </form>
+    </div>
 
 </body>
 </html>
